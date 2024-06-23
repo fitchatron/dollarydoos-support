@@ -34,9 +34,11 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: 20
-                  cache: "npm"
+                  cache: "ppm"
             - name: Install pnpm
               run: npm install -g pnpm
+            - name: Add pnpm to PATH
+              run: export PATH=$(npm bin -g):$PATH
             - name: Install dependencies
               run: pnpm install
             - name: Build
