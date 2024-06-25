@@ -18,7 +18,7 @@ useTitle(title);
 
 <template>
 	<div
-		class="flex h-screen flex-col bg-white dark:bg-slate-900 text-white dark:text-slate-100 overflow-auto"
+		class="flex h-screen flex-col bg-white dark:bg-slate-900 text-black dark:text-slate-100 overflow-auto"
 	>
 		<nav-bar />
 		<main class="grow">

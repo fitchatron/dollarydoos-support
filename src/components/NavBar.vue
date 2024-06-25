@@ -12,10 +12,16 @@ function toggleMenu() {
 
 	menuOpen.value = !menuOpen.value;
 }
+
+const links = [
+	{ id: "1", href: "#features", title: "Features" },
+	{ id: "2", href: "#privacy", title: "Privacy" },
+	{ id: "3", href: "#contact", title: "Contact" },
+];
 </script>
 
 <template>
-	<nav class="bg-white border-gray-200 dark:bg-gray-900">
+	<nav class="bg-white border-brand-primary dark:bg-gray-900 border-b">
 		<div
 			class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4"
 		>
@@ -26,7 +32,7 @@ function toggleMenu() {
 					alt="Dollarydoos Logo"
 				/>
 				<span
-					class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+					class="self-center text-2xl font-semibold whitespace-nowrap text-gray-900 dark:text-white"
 					>Dollarydoos</span
 				>
 			</a>
@@ -63,27 +69,15 @@ function toggleMenu() {
 				<ul
 					class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
 				>
-					<li>
-						<a
-							href="#features"
-							class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-brand-secondary md:p-0 dark:text-white md:dark:hover:text-brand-tertiary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-							>Features</a
-						>
-					</li>
-					<li>
-						<a
-							href="#privacy"
-							class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-brand-secondary md:p-0 dark:text-white md:dark:hover:text-brand-tertiary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-							>Privacy</a
-						>
-					</li>
-					<li>
-						<a
-							href="#contact"
-							class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-brand-secondary md:p-0 dark:text-white md:dark:hover:text-brand-tertiary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-							>Contact</a
-						>
-					</li>
+					<template v-for="link in links" :key="link.id">
+						<li>
+							<a
+								:href="link.href"
+								class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-brand-primary md:p-0 dark:text-white md:dark:hover:text-brand-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+								>{{ link.title }}</a
+							>
+						</li>
+					</template>
 				</ul>
 			</div>
 		</div>
