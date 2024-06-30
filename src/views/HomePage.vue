@@ -70,7 +70,7 @@ const features = [
 						</div>
 					</div>
 				</section>
-				<section id="privacy" class="pb-4">
+				<section id="privacy" class="px-4 pb-4">
 					<h2 class="text-2xl">Privacy</h2>
 					<p>
 						Privacy is important to us. So much so that we do not
@@ -80,7 +80,7 @@ const features = [
 						it locally on device.
 					</p>
 				</section>
-				<section id="contact">
+				<section id="contact" class="px-4">
 					<h2 class="text-2xl">Contact</h2>
 					<p>
 						Questions, suggestions, feedback? Contact us
