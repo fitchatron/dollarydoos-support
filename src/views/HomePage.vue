@@ -75,7 +75,7 @@ const features = [
 					<p>
 						Privacy is important to us. So much so that we do not
 						hold any user data. You can choose to use your personal
-						iCloud storage to sync across devices. Alternativelym
+						iCloud storage to sync across devices. Alternatively,
 						you can turn this off in your system settings, and store
 						it locally on device.
 					</p>
